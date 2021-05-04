@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import Business.Concrete.CampaignManager;
 import Business.Concrete.GameManager;
 import Business.Concrete.GameSaleManager;
@@ -18,15 +20,15 @@ public class Main {
 		user1.setId(1);
 		user1.setFirstName("Emrullah");
 		user1.setLastName("ACAR");
-		user1.setDateOfYear(2000);
-		user1.setNationalityId("11111111111");
+		user1.setDateOfBrith(new Date(2000,04,27));
+		user1.setNationalityId("22222222222");
 		
 		User user2 = new User();
 		user2.setId(2);
 		user2.setFirstName("Murat");
 		user2.setLastName("ACAR");
-		user2.setDateOfYear(1995);
-		user2.setNationalityId("222222");
+		user2.setDateOfBrith(new Date(1995,04,27));
+		user2.setNationalityId("11111111111");
 		
 		Game game1 = new Game();
 		game1.setId(1);

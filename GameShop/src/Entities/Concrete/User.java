@@ -1,5 +1,7 @@
 package Entities.Concrete;
 
+import java.util.Date;
+
 import Entities.Abstract.Entity;
 
 public class User implements Entity{
@@ -8,7 +10,7 @@ public class User implements Entity{
 	private String nationalityId;
 	private String firstName;
 	private String lastName;
-	private int dateOfYear;
+	private Date dateOfBrith;
 	
 	public int getId() {
 		return id;
@@ -34,11 +36,11 @@ public class User implements Entity{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public int getDateOfYear() {
-		return dateOfYear;
+	public Date getDateOfBrith() {
+		return dateOfBrith;
 	}
-	public void setDateOfYear(int dateOfYear) {
-		this.dateOfYear = dateOfYear;
+	public void setDateOfBrith(Date dateOfYear) {
+		this.dateOfBrith = dateOfYear;
 	}
 	
 }
