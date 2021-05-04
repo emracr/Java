@@ -20,12 +20,12 @@ public class StarbucksManager implements StarbucksService{
 	@Override
 	public void add(Customer customer) {
 		
-		if(validateService.validate(customer)) {
-			System.out.println("Mernis doðrulamasýndan geçtiniz");
+		if(validateService.checkCustomer(customer)) {
+			System.out.println(customer.getFirstName() + " " + customer.getLastName() + " adlý kiþi mernis doðrulamasýndan geçti");
 			this.starbucksDao.add(customer);
 		}
 		else {
-			System.out.println("Mernis doðrulamasýndan geçemediniz");
+			System.out.println(customer.getFirstName() + " " + customer.getLastName() + " adlý kiþi mernis doðrulamasýndan geçemedi");
 		}
 		
 	}

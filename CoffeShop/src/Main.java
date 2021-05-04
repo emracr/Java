@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import Adapters.ValidateService;
 import Business.Concrete.NeroManager;
 import Business.Concrete.StarbucksManager;
@@ -13,16 +15,12 @@ public class Main {
 		customer1.setId(1);
 		customer1.setFirstName("Emrullah");
 		customer1.setLastName("ACAR");
-		customer1.setDateOfBriht(2000);
+		customer1.setDateOfBrith(new Date(2000,04,27));
 		customer1.setNationalityId("11111111111");
-
-		NeroManager neroManager = new NeroManager(new NeroDao());
-		neroManager.add(customer1);
-
-		ValidateService validateService = new ValidateService();
-
-		StarbucksManager starBucksManager = new StarbucksManager(new StarbucksDao(), validateService);
+		
+		StarbucksManager starBucksManager = new StarbucksManager(new StarbucksDao(), new ValidateService());
 		starBucksManager.add(customer1);
+
 
 	}
 
