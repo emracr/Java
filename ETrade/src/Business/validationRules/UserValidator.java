@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import Entities.concretes.User;
 
-public class UserValidator implements Validatetor{
+public class UserValidator implements Validator{
 
 	@Override
 	public boolean validate(User user, List<User> users) {
@@ -48,13 +48,12 @@ public class UserValidator implements Validatetor{
 			}
 			else {
 				isVerify = false;
-				System.out.println("Malesef hesabýnýz onaylanmadý");
+				System.out.println("Malesef hesabýnýz doðrulanmadý");
 			}
 			
 		}
 		
 		return isVerify;
-
 		
 	}
 }

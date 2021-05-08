@@ -3,16 +3,16 @@ package Business.concretes;
 import java.util.List;
 
 import Business.abstracts.UserService;
-import Business.validationRules.Validatetor;
+import Business.validationRules.Validator;
 import DataAccess.abstracts.UserDao;
 import Entities.concretes.User;
 
 public class UserManager implements UserService{
 
 	private UserDao userDao;
-	private Validatetor validator;
+	private Validator validator;
 	
-	public UserManager(UserDao userDao, Validatetor validator) {
+	public UserManager(UserDao userDao, Validator validator) {
 		this.userDao = userDao;
 		this.validator = validator;
 	}

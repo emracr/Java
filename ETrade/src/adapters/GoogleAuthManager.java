@@ -22,7 +22,7 @@ public class GoogleAuthManager {
 				break;
 			}
 			else {
-				System.out.println(user.getFirstName() + " " + user.getLastName() + " google hesabý ile oturum açma iþlemi baþarýsýz tekrar deneyin ");
+				System.out.println("Google hesabý ile oturum açma iþlemi baþarýsýz tekrar deneyin ");
 			}
 		}
 
